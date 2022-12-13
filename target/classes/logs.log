@@ -1,0 +1,2 @@
+ERROR   2022-12-12 16:27:28,292 [main] com.managesystem.dentalclinic.GlobalExceptionHandler  - El paciente con id 1 no fue encontrado
+ERROR   2022-12-12 16:27:49,890 [main] com.managesystem.dentalclinic.GlobalExceptionHandler  - El paciente con id 1 no fue encontrado

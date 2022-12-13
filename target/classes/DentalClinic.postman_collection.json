@@ -1,0 +1,2144 @@
+{
+	"info": {
+		"_postman_id": "8d2c771a-e7fe-40a3-9853-c7f2393aa886",
+		"name": "DentalClinic",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21827514"
+	},
+	"item": [
+		{
+			"name": "Address",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"streetName\": \"Bochica\",\r\n    \"streetNumber\": 33\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/address/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"address",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"streetName\": \"Bochica\",\r\n    \"streetNumber\": 33\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/address/create",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"address",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Dec 2022 00:01:24 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "\"CREATED\""
+						}
+					]
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/address/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"address",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetById",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/address/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"address",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Dec 2022 00:01:51 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"streetName\": \"Bochica\",\n    \"streetNumber\": 33\n}"
+						}
+					]
+				},
+				{
+					"name": "ListAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/address",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"address"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ListAll",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/address",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"address"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Dec 2022 00:02:26 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"streetName\": \"Bochica\",\n        \"streetNumber\": 33\n    },\n    {\n        \"id\": 2,\n        \"streetName\": \"San Juan\",\n        \"streetNumber\": 18\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"streetName\": \"Casa\",\r\n    \"streetNumber\": 11\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/address",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"address"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1,\r\n    \"streetName\": \"Casa\",\r\n    \"streetNumber\": 11\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/address",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"address"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "22"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Dec 2022 00:02:36 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "Dirección actualizada"
+						}
+					]
+				},
+				{
+					"name": "Update - Exception",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 40,\r\n    \"streetName\": \"Casa\",\r\n    \"streetNumber\": 11\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/address",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"address"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update - Exception",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 40,\r\n    \"streetName\": \"Casa\",\r\n    \"streetNumber\": 11\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/address",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"address"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "34"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Dec 2022 00:02:43 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "No existe la dirección con id: 40"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/address/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"address",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/address/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"address",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "20"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Dec 2022 00:02:50 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "Dirección eliminada"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Patient",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\":\"Yazmin\",\r\n    \"lastName\":\"Erazo\",\r\n    \"dni\":\"369\",\r\n    \"address\": {\r\n        \"id\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/patients/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"patients",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\":\"Yazmin\",\r\n    \"lastName\":\"Erazo\",\r\n    \"dni\":\"369\",\r\n    \"address\": {\r\n        \"id\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/patient/create",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"patient",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Dec 2022 00:04:55 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "\"CREATED\""
+						}
+					]
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/patients/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"patients",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetById",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/patient/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"patient",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Dec 2022 00:05:03 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"firstName\": \"Yazmin\",\n    \"lastName\": \"Erazo\",\n    \"dni\": \"369\",\n    \"address\": {\n        \"id\": 1,\n        \"streetName\": \"Bochica\",\n        \"streetNumber\": 33\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "ListAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/patients/list",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"patients",
+								"list"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ListAll",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/patient/list",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"patient",
+										"list"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Dec 2022 00:05:10 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"firstName\": \"Yazmin\",\n        \"lastName\": \"Erazo\",\n        \"dni\": \"369\",\n        \"address\": {\n            \"id\": 1,\n            \"streetName\": \"Bochica\",\n            \"streetNumber\": 33\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"id\": 1,\r\n    \"firstName\":\"Katy\",\r\n    \"lastName\":\"Erazo\",\r\n    \"dni\":\"369\",\r\n    \"address\": {\r\n        \"id\": 1,\r\n        \"streetName\": \"Casa\",\r\n        \"streetNumber\": 11\r\n    }\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/patients/update",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"patients",
+								"update"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{   \r\n    \"id\": 1,\r\n    \"firstName\":\"Katy\",\r\n    \"lastName\":\"Erazo\",\r\n    \"dni\":\"369\",\r\n    \"address\": {\r\n        \"id\": 1,\r\n        \"streetName\": \"Casa\",\r\n        \"streetNumber\": 11\r\n    }\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/patient/update",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"patient",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "20"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Dec 2022 00:05:16 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "Paciente actualizado"
+						}
+					]
+				},
+				{
+					"name": "Update - Exception",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"id\": 20,\r\n    \"firstName\":\"Lorena\",\r\n    \"lastName\":\"Erazo\",\r\n    \"dni\":\"369\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/patients/update",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"patients",
+								"update"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update - Exception",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{   \r\n    \"id\": 20,\r\n    \"firstName\":\"Lorena\",\r\n    \"lastName\":\"Erazo\",\r\n    \"dni\":\"369\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/patient/update",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"patient",
+										"update"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "32"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Dec 2022 00:05:23 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "No existe el paciente con id: 20"
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/patient/delete/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"patient",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/patient/delete/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"patient",
+										"delete",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "18"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Dec 2022 00:09:06 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "Paciente eliminado"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Dentist",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\":\"Stella\",\r\n    \"lastName\":\"Martinez\",\r\n    \"dentistLicense\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/dentist/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dentist",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\":\"Stella\",\r\n    \"lastName\":\"Martinez\",\r\n    \"dentistLicense\":\"123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/dentist/create",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"dentist",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Dec 2022 00:05:33 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "\"CREATED\""
+						}
+					]
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/dentist/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dentist",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetById",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/dentist/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"dentist",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Dec 2022 00:05:38 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"firstName\": \"Stella\",\n    \"lastName\": \"Martinez\",\n    \"dentistLicense\": \"123456\"\n}"
+						}
+					]
+				},
+				{
+					"name": "GetByLastName",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/dentist/getByLastName/Martinez",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dentist",
+								"getByLastName",
+								"Martinez"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetByLastName",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:8080/dentist/getByLastName/Martinez",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"dentist",
+										"getByLastName",
+										"Martinez"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Dec 2022 00:05:43 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"firstName\": \"Stella\",\n        \"lastName\": \"Martinez\",\n        \"dentistLicense\": \"123456\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "ListAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/dentist/list",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dentist",
+								"list"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ListAll",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/dentist/list",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"dentist",
+										"list"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Dec 2022 00:20:26 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"firstName\": \"Lorena\",\n        \"lastName\": \"Martinez\",\n        \"dentistLicense\": \"123456\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Update First Name",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"firstName\": \"Lorena\",\r\n    \"lastName\": \"Martinez\",\r\n    \"dentistLicense\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/dentist/update",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dentist",
+								"update"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1,\r\n    \"firstName\": \"Lorena\",\r\n    \"lastName\": \"Erazo\",\r\n    \"dentistLicense\": \"36911\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/dentist/update",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"dentist",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "23"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Dec 2022 00:05:54 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "Odontólogo actualizado"
+						}
+					]
+				},
+				{
+					"name": "Update - Exception",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 30,\r\n    \"firstName\": \"Lorena\",\r\n    \"lastName\": \"Erazo\",\r\n    \"dentistLicense\": \"36911\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/dentist/update",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dentist",
+								"update"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update - Exception",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 30,\r\n    \"firstName\": \"Lorena\",\r\n    \"lastName\": \"Erazo\",\r\n    \"dentistLicense\": \"36911\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/dentist/update",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"dentist",
+										"update"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "35"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Dec 2022 00:06:01 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "No existe el odontólogo con id: 30"
+						}
+					]
+				},
+				{
+					"name": "Delete One",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/dentist/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dentist",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete One",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/dentist/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"dentist",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "21"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Dec 2022 00:10:00 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "Odontólogo eliminado"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Appointment",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"patient\":{\r\n        \"id\": 1},\r\n    \"dentist\":{\r\n        \"id\":1},\r\n    \"date\": \"2022-12-12\",\r\n    \"time\": \"14:20\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/appointment",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"appointment"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"patient\":{\r\n        \"id\": 1},\r\n    \"dentist\":{\r\n        \"id\":1},\r\n    \"date\": \"2022-12-12\",\r\n    \"time\": \"14:20\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/appointment",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"appointment"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Dec 2022 00:06:09 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "\"CREATED\""
+						}
+					]
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/appointment/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"appointment",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetById",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/appointment/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"appointment",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Dec 2022 00:06:17 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"patient\": {\n        \"id\": 1,\n        \"firstName\": \"Katy\",\n        \"lastName\": \"Erazo\",\n        \"dni\": \"369\",\n        \"address\": {\n            \"id\": 1,\n            \"streetName\": \"Casa\",\n            \"streetNumber\": 11\n        },\n        \"dateAdmition\": null\n    },\n    \"dentist\": {\n        \"id\": 1,\n        \"firstName\": \"Lorena\",\n        \"lastName\": \"Erazo\",\n        \"dentistLicense\": \"36911\"\n    },\n    \"date\": \"2022-12-12\",\n    \"time\": \"14:20:00\"\n}"
+						},
+						{
+							"name": "GetById - After Update",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/appointment/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"appointment",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Dec 2022 00:08:16 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"patient\": {\n        \"id\": 3,\n        \"firstName\": \"Yazmin\",\n        \"lastName\": \"Erazo\",\n        \"dni\": \"369\",\n        \"address\": {\n            \"id\": 1,\n            \"streetName\": \"Bochica\",\n            \"streetNumber\": 33\n        },\n        \"dateAdmition\": null\n    },\n    \"dentist\": {\n        \"id\": 3,\n        \"firstName\": \"Stella\",\n        \"lastName\": \"Martinez\",\n        \"dentistLicense\": \"123456\"\n    },\n    \"date\": \"2022-12-12\",\n    \"time\": \"09:15:00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "ListAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/appointment",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"appointment"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ListAll",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/appointment",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"appointment"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Dec 2022 00:06:25 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"patient\": {\n            \"id\": 1,\n            \"firstName\": \"Katy\",\n            \"lastName\": \"Erazo\",\n            \"dni\": \"369\",\n            \"address\": {\n                \"id\": 1,\n                \"streetName\": \"Casa\",\n                \"streetNumber\": 11\n            },\n            \"dateAdmition\": null\n        },\n        \"dentist\": {\n            \"id\": 1,\n            \"firstName\": \"Lorena\",\n            \"lastName\": \"Erazo\",\n            \"dentistLicense\": \"36911\"\n        },\n        \"date\": \"2022-12-12\",\n        \"time\": \"14:20:00\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Update Time",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1,\r\n    \"patient\":{\r\n        \"firstName\":\"Yazmin\",\r\n        \"lastName\":\"Erazo\",\r\n        \"dni\":\"369\",\r\n            \"address\": {\r\n                \"id\": 1,\r\n                \"streetName\": \"Bochica\",\r\n                \"streetNumber\": 33\r\n        },\r\n        \"dateAdmition\": \"2022-12-11\"\r\n    },\r\n    \"dentist\":{\r\n        \"id\": 1,\r\n        \"firstName\":\"Stella\",\r\n        \"lastName\":\"Martinez\",\r\n        \"dentistLicense\":\"123456\"\r\n    },\r\n    \"date\": \"2022-12-12\",\r\n    \"time\": \"09:15\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/appointment",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"appointment"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":1,\r\n    \"patient\":{\r\n    \"firstName\":\"Yazmin\",\r\n    \"lastName\":\"Erazo\",\r\n    \"dni\":\"369\",\r\n        \"address\": {\r\n            \"id\": 1,\r\n        \"streetName\": \"Bochica\",\r\n        \"streetNumber\": 33\r\n}\r\n    },\r\n    \"dentist\":{\r\n        \"firstName\":\"Stella\",\r\n        \"lastName\":\"Martinez\",\r\n        \"dentistLicense\":\"123456\"\r\n    },\r\n    \"date\": \"2022-12-12\",\r\n    \"time\": \"09:15\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/appointment",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"appointment"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "16"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Dec 2022 00:07:58 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "Cita actualizada"
+						}
+					]
+				},
+				{
+					"name": "Update - Exception",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":50,\r\n    \"patient\":{\r\n        \"id\": 2},\r\n    \"dentist\":{\r\n        \"id\":1},\r\n    \"date\": \"2022-12-12\",\r\n    \"time\": \"09:15\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/appointment",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"appointment"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update - Exception",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":50,\r\n    \"patient\":{\r\n        \"id\": 2},\r\n    \"dentist\":{\r\n        \"id\":1},\r\n    \"date\": \"2022-12-12\",\r\n    \"time\": \"09:15\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/appointment",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"appointment"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "27"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Dec 2022 00:06:45 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "No existe la cita con id 50"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":50,\r\n    \"patient\":{\r\n        \"id\": 2},\r\n    \"dentist\":{\r\n        \"id\":1},\r\n    \"date\": \"2022-12-12\",\r\n    \"time\": \"09:15\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/appointment/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"appointment",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":50,\r\n    \"patient\":{\r\n        \"id\": 2},\r\n    \"dentist\":{\r\n        \"id\":1},\r\n    \"date\": \"2022-12-12\",\r\n    \"time\": \"09:15\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/appointment/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"appointment",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "14"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Dec 2022 00:10:08 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "Cita eliminada"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "JWT",
+			"item": [
+				{
+					"name": "Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"yazmin\",\r\n    \"password\":\"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/authenticate",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"authenticate"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Token",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\":\"yazmin\",\r\n    \"password\":\"test\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/authenticate",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"authenticate"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Dec 2022 20:05:49 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"jwt\": \"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5YXptaW4iLCJleHAiOjE2NzA4NzU2MTAsImlhdCI6MTY3MDg3NTU0OX0.EtbzYELqezBaIjuYsqqKJsWCAlQDAig2cTJrFvJ3nh8\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Authorization",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmb28iLCJleHAiOjE2NzA4NzQ1NDksImlhdCI6MTY3MDg3NDQ4OH0.WoBErz95pQ-zZnlOvi6kPnGu3tkcA5zij8zh71tvtx0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/authorized",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"authorized"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Authorization",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5YXptaW4iLCJleHAiOjE2NzA4NzU2MTAsImlhdCI6MTY3MDg3NTU0OX0.EtbzYELqezBaIjuYsqqKJsWCAlQDAig2cTJrFvJ3nh8",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8080/authorized",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"authorized"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "24"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Dec 2022 20:06:13 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "Autorizado para ingresar"
+						}
+					]
+				}
+			]
+		}
+	]
+}
